@@ -45,7 +45,7 @@ export default function Navbar() {
 
     // Using the navData array to put the elements in an array, this allows me to change the style for all elements in one place
     const navLinks = navData.map(item => {
-        return <a className="px-3 uppercase text-sm font-medium underline decoration-2 underline-offset-8 decoration-transparent hover:text-neutral-500 hover:decoration-neutral-500 transition-colors duration-500" key={item.id} href={item.href}>{item.text}</a>
+        return <a className="px-3 uppercase text-sm font-medium underline decoration-2 underline-offset-8 decoration-transparent hover:text-tintswalo-primary hover:decoration-tintswalo-primary transition-colors duration-300" key={item.id} href={item.href}>{item.text}</a>
     })
 
     return (
