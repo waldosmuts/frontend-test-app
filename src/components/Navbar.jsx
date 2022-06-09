@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Navbar() {
     // Creating an array for all the anchors in the navbar for easier styiling and reading
     const navData = [
@@ -49,8 +51,8 @@ export default function Navbar() {
     })
 
     return (
-        <nav className="flex items-center justify-between pl-6 pr-12 py-6 font-montserrat font-light bg-white shadow-md">
-            <a href="https://www.tintswalo.com/atlantic/"><img className="w-28" src="https://www.tintswalo.com/atlantic/wp-content/uploads/2021/12/tintswalo-atlantic-logo-008080.png" alt="Tintswalo Atlantic Logo" /></a>
+        <nav className="flex items-center justify-between pl-6 pr-12 py-6 font-montserrat font-light bg-white shadow-md w-full z-20">
+            <Link to="/"><img className="w-28" src="https://www.tintswalo.com/atlantic/wp-content/uploads/2021/12/tintswalo-atlantic-logo-008080.png" alt="Tintswalo Atlantic Logo" /></Link>
             <div className="flex items-center">
                 {navLinks}
             </div>

@@ -1,16 +1,14 @@
-import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar"
-import scrollToTop from "../../utils/ScrollToTop"
-import Header from "./Header"
+import Footer from "../../components/Footer"
 import Main from "./Main"
+import scrollToTop from "../../utils/ScrollToTop"
 
-export default function Vouchers() {
+export default function Voucher() {
     scrollToTop()
 
     return (
         <div className="bg-neutral-100 min-h-screen flex flex-col justify-between scroll-smooth">
             <Navbar />
-            <Header />
             <Main />
             <Footer />
         </div>

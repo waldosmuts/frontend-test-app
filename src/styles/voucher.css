@@ -1,0 +1,28 @@
+.voucher--description p {
+    margin-bottom: 1.5rem;
+}
+
+.voucher--description strong {
+    font-weight: 500;
+}
+
+.voucher--description ul {
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.voucher--description ul li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.voucher--description ul li::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background-color: theme("colors.tintswalo-primary");
+}

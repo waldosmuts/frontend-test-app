@@ -1,34 +1,21 @@
-import { useEffect, useState } from "react"
+import { useContext } from "react"
+import { AppContext } from "../../AppContext"
 import Voucher from "./Voucher"
 
 export default function Main() {
-    const [isLoading, setIsLoading] = useState(true)
-    const [vouchersData, setVouchersData] = useState([])
-
-    // Async get function gets vouchersData from URL and changes the state to reflect the changes
-    useEffect(() => {
-        const url = "https://shop.bookin1.com/api/property/11128/allvouchers"
-
-        async function getAndSetVouchersData() {
-            const res = await fetch(url)
-            const data = await res.json()
-            setVouchersData(data.vouchers)
-            setIsLoading(false)
-        }
-
-        getAndSetVouchersData()
-    }, [])
-
+    // Gets isLoading and vouchersData from Provider in App.jsx to avoid prop drilling
+    const { isLoading, vouchersData } = useContext(AppContext)
     // Maps through vouchersData and returns an array of components with the props of each voucher to be rendered
     const voucherElements = vouchersData.map(voucher => {
         const voucherData = { ...voucher }
-
+        // Passes voucher data as props to Voucher component
         return <Voucher
             key={voucher.id}
             data={voucherData}
         />
     })
 
+    // if isLoading is true, a loader will appear while the data is getting fetched
     return (
         <main className="font-montserrat font-light">
             {
