@@ -7,7 +7,7 @@ export default function Voucher() {
     scrollToTop()
 
     return (
-        <div className="bg-neutral-100 min-h-screen flex flex-col justify-between scroll-smooth">
+        <div className="bg-neutral-100 min-h-screen flex flex-col justify-between items-center scroll-smooth">
             <Navbar />
             <Main />
             <Footer />

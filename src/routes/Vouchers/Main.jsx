@@ -25,7 +25,7 @@ export default function Main() {
                         <div className="loader absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -mt-14" />
                     </div>
                     :
-                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-8 gap-y-12 relative p-24">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-8 gap-y-12 relative pt-32 lg:pt-24 pb-24 px-6 lg:px-12 xl:px-24 2xl:px-48">
                         {voucherElements}
                     </div>
             }
