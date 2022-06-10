@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub Repo](https://github.com/waldosmuts/frontend-test-app/)
-- Live Site URL: [Live Preview](https://tintswalo-vouchers-in1-test.netlify.app/)
+- Live Site URL: [Live Preview](https://frontend-test-tintswalo.netlify.app/)
 
 ## My process
 
