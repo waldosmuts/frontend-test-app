@@ -2,6 +2,10 @@
 
 This is a solution to the [Frontend Test Bed](https://github.com/In1Solutions/frontend-test-bed) challenge.
 
+For this challenge I chose Tintswalo Atlantic as my property.
+
+The tech I used for this app is listed below.
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -10,7 +14,6 @@ This is a solution to the [Frontend Test Bed](https://github.com/In1Solutions/fr
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Continued development](#continued-development)
 - [Author](#author)
 
 ## Overview
