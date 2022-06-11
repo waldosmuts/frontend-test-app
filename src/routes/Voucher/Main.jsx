@@ -58,16 +58,6 @@ export default function Main() {
         }
     }, [cashVoucherValue])
 
-    // Returns error message if voucher was not found
-    if (Object.keys(voucherData).length === 0) {
-        return (
-            <main className="flex flex-col items-center justify-center font-montserrat">
-                <h1 className="uppercase">That voucher could not be found or is no longer available</h1>
-                <Link className="uppercase font-montserrat font-normal text-sm px-6 py-3 border border-y-tintswalo-primary border-x-transparent rounded text-tintswalo-primary hover:text-white hover:bg-tintswalo-primary hover:scale-110 transition duration-300 mt-6" to="/">Return Home</Link>
-            </main>
-        )
-    }
-
     // Returns a loader component while loading
     if (!vouchersData.length) {
         return (
@@ -75,6 +65,16 @@ export default function Main() {
                 <div className="relative w-full h-full">
                     <div className="loader absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -mt-14" />
                 </div>
+            </main>
+        )
+    }
+
+    // Returns error message if voucher was not found
+    if (Object.keys(voucherData).length === 0) {
+        return (
+            <main className="flex flex-col items-center justify-center font-montserrat">
+                <h1 className="uppercase">That voucher could not be found or is no longer available</h1>
+                <Link className="uppercase font-montserrat font-normal text-sm px-6 py-3 border border-y-tintswalo-primary border-x-transparent rounded text-tintswalo-primary hover:text-white hover:bg-tintswalo-primary hover:scale-110 transition duration-300 mt-6" to="/">Return Home</Link>
             </main>
         )
     }
