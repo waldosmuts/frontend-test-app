@@ -76,7 +76,7 @@ export default function Navbar() {
             <Transition
                 show={showNav}
                 className="fixed top-0 left-0 h-screen xl:h-auto xl:static z-30 origin-left"
-                enter="transition duration-300"
+                enter="transition duration-300 xl:transition-none"
                 enterFrom="scale-x-0"
                 enterTo="scale-x-1"
                 leave="transition duration-300"
@@ -92,7 +92,7 @@ export default function Navbar() {
             <Transition
                 className="bg-black w-screen h-screen fixed top-0 left-0 z-20 hidden sm:block xl:hidden"
                 show={showNav}
-                enter="transition-opacity duration-75"
+                enter="transition-opacity duration-75 xl:transition-none"
                 enterFrom="opacity-0"
                 enterTo="opacity-25"
                 leave="transition-opacity duration-150"
