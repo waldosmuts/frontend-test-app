@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { AppContext } from "./AppContext"
 import Vouchers from "./routes/Vouchers/index"
 import Voucher from "./routes/Voucher/index"
+import Error from "./routes/Error"
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -29,6 +30,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Vouchers />} />
           <Route path="voucher/:voucherId" element={<Voucher />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
     </AppContext.Provider>
