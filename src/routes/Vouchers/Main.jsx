@@ -5,14 +5,23 @@ import Voucher from "./Voucher"
 export default function Main() {
     // Gets isLoading and vouchersData from Provider in App.jsx to avoid prop drilling
     const { isLoading, vouchersData } = useContext(AppContext)
+
+    // Sorts vouchersData element by sequence property
+    const vouchersBySequence = vouchersData.sort((a, b) => {
+        return a.sequence - b.sequence
+    })
+
     // Maps through vouchersData and returns an array of components with the props of each voucher to be rendered
-    const voucherElements = vouchersData.map(voucher => {
+    const voucherElements = vouchersBySequence.map(voucher => {
+        // Spreads props recieved from AppContext into an object to be passed as a prop
         const voucherData = { ...voucher }
         // Passes voucher data as props to Voucher component
-        return <Voucher
+        const voucherElement = <Voucher
             key={voucher.id}
             data={voucherData}
         />
+
+        return voucherElement
     })
 
     // if isLoading is true, a loader will appear while the data is getting fetched
