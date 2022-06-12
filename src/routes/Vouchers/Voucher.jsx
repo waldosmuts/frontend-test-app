@@ -15,7 +15,7 @@ export default function Voucher({ data }) {
             <div className="flex flex-col grow">
                 <span className="font-normal text-xs px-6 py-3 bg-tintswalo-primary text-white uppercase">{hotelName}</span>
                 <Link to={`voucher/${id}`}>
-                    <h4 className="text-lg leading-6 mx-6 mt-4 uppercase hover:text-tintswalo-primary">{name}</h4>
+                    <h4 className="text-lg leading-6 mx-6 mt-4 uppercase hover:text-tintswalo-primary transition duration-300">{name}</h4>
                 </Link>
                 <div className="mt-3 mx-6 font-medium text-neutral-500 text-sm relative flex flex-col justify-between h-full">
                     <div className="h-20 overflow-hidden pointer-events-none" dangerouslySetInnerHTML={{ __html: description }} />
